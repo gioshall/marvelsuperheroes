@@ -56,7 +56,7 @@ $('.video-block li.video-01').click(function(){
 });
 $('.video-block li.video-02').click(function(){
     $('.video-view').show();
-    $('.video-view iframe').attr('src','https://www.youtube.com/embed/JAUoeqvedMo?rel=0&autoplay=1')   
+    $('.video-view iframe').attr('src','https://www.youtube.com/embed/uSLculV2HWk?rel=0&autoplay=1')   
 })
 
 $('.video-view .mask , .video-close').click(function(){
