@@ -39,7 +39,7 @@ function slideSwitch() {
     if ( $active.length == 0 ) $active = $('#slideshow-bg div:last');
     var $next =  $active.next().length ? $active.next()
         : $('#slideshow-bg div:first');
-        
+
     $next.addClass('active')
     $active.removeClass('active');
 }
@@ -63,3 +63,52 @@ $('.video-view .mask , .video-close').click(function(){
     $('.video-view').hide();
     $('.video-view iframe').attr('src','')
 })
+
+//detect plug-in
+
+require( ["Ubitus.GCOnNine"], function(gcOnNine){ 
+      gcOnNine.isPluginPlayerInstalled({
+        "target": document.getElementById("container"),
+        "width": 960,
+        "height": 540,
+        "callback": function( result ){
+          //console.log(result)
+          if(result.successful){
+
+          }else{
+            $('.info.installer-guide').show()
+            $('.info.finish').hide()
+          }
+        }
+      });
+    });
+
+//broswer
+
+$(document).ready(function(){
+var broswer = navigator.userAgent.toLowerCase();
+var chrome = broswer.match(/(chrome)/);
+var firefox = broswer.match(/(firefox)/);
+    if (chrome) {
+        $('li.chrome').css('display','block');
+    } else if (firefox) {
+        $('li.firefox').css('display','block');
+    } else{
+        $('li.ie').css('display','block');
+    };
+});
+
+
+$('.browser-guide li span').click(function(){
+    $('li').attr('style','');
+});
+$('.ecp-cm').click(function(){
+    $('li.chrome').css('display','block');
+});
+$('.ecp-ff').click(function(){
+    $('li.firefox').css('display','block');
+});
+$('.ecp-ie').click(function(){
+    $('li.ie').css('display','block');
+});
+

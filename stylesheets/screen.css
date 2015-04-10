@@ -274,6 +274,18 @@ body {
   background-repeat: no-repeat;
   background-position: 35px center;
 }
+.wrapper .act-block .main-btn.plug-in {
+  width: 300px;
+  float: right;
+  color: #fff;
+  font-size: 18px;
+  line-height: 50px;
+  height: 50px;
+  background-color: #16a086;
+  display: block;
+  text-decoration: none;
+  margin-left: 15px;
+}
 .wrapper .act-block .email-input {
   width: 580px;
   margin: auto;
@@ -336,6 +348,56 @@ body {
 }
 .wrapper .act-block.step-02 .email-input {
   display: block;
+}
+.wrapper .act-block.step-03 {
+  display: none;
+}
+.wrapper .act-block .installer-guide {
+  display: none;
+}
+.wrapper .act-block .installer-guide.pass {
+  height: 0;
+  overflow: hidden;
+  font-size: 0;
+  padding: 0;
+  display: none;
+}
+.wrapper .act-block .installer-guide hr {
+  margin: 15px auto;
+  background-color: #666;
+  height: 2px;
+  border: 0;
+}
+.wrapper .act-block .installer-guide h3 {
+  font-size: 22px;
+  line-height: 40px;
+}
+.wrapper .act-block .installer-guide p {
+  font-size: 15px;
+  line-height: 25px;
+}
+.wrapper .act-block .installer-guide .browser-guide li {
+  display: none;
+  font-size: 15px;
+  line-height: 25px;
+}
+.wrapper .act-block .installer-guide .browser-guide li img {
+  display: block;
+  margin: 15px auto;
+  border: 1px #16a086 solid;
+  box-shadow: 0 0 15px #16a086;
+}
+.wrapper .act-block .installer-guide .browser-guide li b {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  line-height: 25px;
+  color: #666;
+}
+.wrapper .act-block .installer-guide .browser-guide li b span {
+  color: #999;
+  text-decoration: underline;
 }
 
 .video-view {

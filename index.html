@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<title>Yahoo奇摩遊戲 x GameNow</title>
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" >
 	<link rel="stylesheet" href="stylesheets/ie.css">
@@ -47,6 +47,46 @@
 點擊下方「參加活動按鈕」，分享到Facebook，填寫電子郵件，即可獲得《樂高-驚奇超級英雄》免費遊玩時數。 
 		</div>
 	</div>
+	<div class="act-block step-03">
+		<div class="info installer-guide">
+			<h2>恭喜您完成登錄，您可預先安裝遊戲啟動器</h2>
+			<hr></hr>
+			<h3>STEP 1 下載安裝遊戲啟動器</h3>
+			<p>
+				<a href="#" class="main-btn plug-in">下載安裝遊戲啟動器</a>
+				｢遊戲啟動器（GameNow）｣ 為啟動遊戲主程式的 軟體，在登入遊戲之前請務必先下載並安裝於電腦。 下載之後請依照說明進行安裝，若無安裝遊戲啟動 器便無法登入遊戲。
+			</p>
+			<hr></hr>
+			<h3>STEP 2 瀏覽器授權要求</h3>
+			<p><ul class="browser-guide">
+				<li class="chrome">
+					在您安裝完成 GameNow 的遊戲播放器程式之後，您的 Chrome 瀏覽器會彈出一則授權小圖示（如下圖右上方有一個小小的拼圖示並顯是紅色叉叉），請點擊後，並選擇"永遠允許在 tw.ugamenow.com 使用外掛程式"選項， 即可順利開始執行 GameNow 的遊戲播放器程式。
+					<img src="img/brs-cm.jpg">
+					<b><span class="ecp-ff">我是使用 firefox</span> │ <span class="ecp-ie">我是使用 ie</span></b>
+				</li>
+				<li class="firefox">
+					在您安裝完成 GameNow 的遊戲播放器程式之後，您的 FireFox 瀏覽器會彈出一則授權視窗（如下圖上方），請點擊後允許 tw.ugamenow.com執行「GameNow」， 即可順利開始執行 GameNow 的遊戲播放器程式。
+					<img src="img/brs-ff.jpg">
+					<b><span class="ecp-cm">我是使用 chrome</span> │ <span class="ecp-ie">我是使用 ie</span></b>
+				</li>
+				<li class="ie">
+					在您安裝完成 GameNow 的遊戲播放器程式之後，您的 IE 瀏覽器會彈出一則附加元件允許同意視窗（如下圖下方有一個允許附加元件），請點擊允許’UBITUS TECHNOLOGY LIMITED’的‘GameNow’， 即可順利開始執行 GameNow 的遊戲播放器程式。
+					<img src="img/brs-ie.jpg">
+					<b><span class="ecp-cm">我是使用 chrome</span> │ <span class="ecp-ff">我是使用 firefox</span></b>
+				</li>
+			</ul>
+			</p>
+			<hr></hr>
+			<h3>STEP 3 恭喜您！完成安裝</h3>
+			<p>
+				恭喜您，已完成遊戲啟動器安裝，4/21 檢查信箱領取您的免費遊玩序號後，就可直接暢玩樂高-驚奇超級英雄！
+			</p>
+		</div>
+		<div class="info finish">
+			<h2>恭喜您完成預約</h2>
+			<p>請您在 4/21 檢查信箱領取免費遊玩序號後，就可直接暢玩樂高-驚奇超級英雄！</p>
+		</div>		
+	</div>
 </div>
 <div class="logo-cp"></div>
 
@@ -59,8 +99,13 @@
 	</div>
 </div>
 
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="js/script.js"></script>	
-<script src="js/fb_share.js"></script>	
+<!-- player -->
+<div id="container" style="display:block;position: absolute;z-index: 0;top: -10000px;opacity: 0;"></div>
+
+<script src="js/vendor/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/vendor/require.js"></script>
+<script src="js/fb_share.js"></script>
+<script src="js/gconnine.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
