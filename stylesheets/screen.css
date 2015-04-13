@@ -62,8 +62,16 @@ body {
 
 ::selection {
   background-color: #cc0000;
+  color: #fff;
 }
 
+@font-face {
+  font-family: fontello;
+  src: url("../font/fontello.eot");
+  src: url("../font/fontello.eot#iefix") format("embedded-opentype"), url("../font/fontello.woff") format("woff"), url("../font/fontello.ttf") format("truetype"), url("../font/fontello.svg#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 #slideshow-bg {
   position: absolute;
   top: 0;
@@ -110,6 +118,10 @@ body {
 }
 #slideshow-bg div.bg-05 {
   background-image: url("../img/bg-05.jpg");
+  background-repeat: no-repeat;
+}
+#slideshow-bg div.bg-06 {
+  background-image: url("../img/bg-06.jpg");
   background-repeat: no-repeat;
 }
 
@@ -164,6 +176,7 @@ body {
   margin-top: -95px;
   position: relative;
   z-index: 3;
+  display: none;
 }
 
 .wrapper {
@@ -267,12 +280,35 @@ body {
   box-shadow: 0 2px 8px #000;
 }
 .wrapper .act-block .main-btn.btn-fb {
-  background-color: #3b5998;
   color: #fff;
+  width: 400px;
+  height: 90px;
+  line-height: 90px;
+  position: relative;
   font-weight: bold;
+  border: 2px #334c83 solid;
+  box-shadow: 0 2px 0 #809bd4 inset, 0 2px 8px #000;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5a76b5), to(#334c83));
+  background-image: -webkit-linear-gradient(top, #5a76b5, #334c83);
+  background-image: -moz-linear-gradient(top, #5a76b5, #334c83);
+  background-image: -ms-linear-gradient(top, #5a76b5, #334c83);
+  background-image: -o-linear-gradient(top, #5a76b5, #334c83);
+  background-image: linear-gradient(to bottom, #5a76b5, #334c83);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#5a76b5', EndColorStr='#334c83');
+}
+.wrapper .act-block .main-btn.btn-fb:after {
   background-image: url("../img/icon-fb.png");
   background-repeat: no-repeat;
-  background-position: 35px center;
+  width: 52px;
+  height: 52px;
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 19px;
+}
+.wrapper .act-block .main-btn.btn-fb:active {
+  background: #334c83;
+  box-shadow: 0 0 0 #809bd4 inset, 0 2px 8px #000;
 }
 .wrapper .act-block .main-btn.plug-in {
   width: 300px;
@@ -286,9 +322,17 @@ body {
   text-decoration: none;
   margin-left: 15px;
 }
-.wrapper .act-block .email-input {
+.wrapper .act-block .email-input h3 {
+  color: #fff;
+  font-size: 19px;
+  margin-top: -5px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0 1px 2px #000;
+}
+.wrapper .act-block .email-input form {
   width: 580px;
-  margin: auto;
+  margin: 14px auto;
   text-align: center;
   border: 3px #969696 solid;
   background-color: #fff;
@@ -301,8 +345,10 @@ body {
   -webkit-box-shadow: 0 2px 8px #000;
   box-shadow: 0 2px 8px #000;
 }
-.wrapper .act-block .email-input .text {
-  width: 450px;
+.wrapper .act-block .email-input .email {
+  float: left;
+  margin: 0 0 0 10px;
+  width: 440px;
   border: 0;
   height: 55px;
   font-size: 25px;
@@ -310,7 +356,7 @@ body {
   background-color: transparent;
   font-family: helvetica, "LiHei Pro", "Heiti TC", "微軟正黑體";
 }
-.wrapper .act-block .email-input .submit {
+.wrapper .act-block .email-input .clear .button {
   width: 120px;
   height: 60px;
   line-height: 60px;
@@ -333,9 +379,20 @@ body {
   margin: 50px auto;
 }
 .wrapper .act-block .info h2 {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
+  line-height: 40px;
+}
+.wrapper .act-block .not-share {
+  position: absolute;
+  width: 100%;
+  text-align: center;
   line-height: 50px;
+  font-size: 21px;
+  color: #ff0000;
+  font-weight: bold;
+  text-shadow: 0 1px 2px #000;
+  display: none;
 }
 .wrapper .act-block.step-01 .btn-fb {
   display: block;
@@ -391,13 +448,24 @@ body {
   width: 100%;
   display: block;
   text-align: center;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 25px;
   color: #666;
 }
 .wrapper .act-block .installer-guide .browser-guide li b span {
-  color: #999;
-  text-decoration: underline;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.wrapper .act-block .installer-guide .browser-guide li b span:hover {
+  color: #45e2c4;
+}
+.wrapper .act-block .installer-guide .browser-guide li b span i {
+  font-family: fontello;
+  font-weight: normal;
+  margin: 0 3px;
+  text-decoration: none;
+  color: #fff;
 }
 
 .video-view {
@@ -445,4 +513,12 @@ body {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+#container {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  top: -10000px;
+  opacity: 0;
 }

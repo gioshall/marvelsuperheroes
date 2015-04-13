@@ -66,6 +66,12 @@ $('.video-view .mask , .video-close').click(function(){
 
 //detect plug-in
 
+$('#mc-embedded-subscribe').click(function(){   
+    setTimeout( 
+        "$('.act-block.step-02').remove();$('.act-block.step-03').show()"
+        ,1500 );
+})
+
 require( ["Ubitus.GCOnNine"], function(gcOnNine){ 
       gcOnNine.isPluginPlayerInstalled({
         "target": document.getElementById("container"),
